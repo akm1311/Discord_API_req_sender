@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Discord API Request</title>
+    <style>
+        /* Add CSS styles here */
+        body {
+            background-image: url('background'); /* Set your background image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
+        }
+
+        header {
+            text-align: center;
+            padding: 20px;
+        }
+
+        img {
+            max-width: 100%;
+        }
+        
+        .success {
+         color: green;
+         font-weight: bold;
+        }
+
+        .failure {
+        color: red;
+        font-weight: bold;
+        }
+
+        /* Add more CSS styles for other elements as needed */
+    </style>
+</head>
+<body>
+    <header>
+        <img src="background.jpg" width="45" alt="Website Header">
+        <h1>Welcome to the Discord API Request Tool</h1>
+    </header>
+    <form id="requestForm">
+        <div class="form-container">
+            <label for="urlInput">Enter Discord API URL:</label>
+            <input type="text" id="urlInput" placeholder="Enter Discord API URL">
+            <br>
+            <br>
+            <label for="tokenInput">Enter Discord tokens (one per line):</label>
+            <br>
+            <textarea id="tokenInput" rows="23" cols="77" placeholder="Enter Discord tokens, one per line"></textarea>
+            <br>
+            <br>
+            <button type="submit">Make Discord API Requests</button>
+        </div>
+    </form>
+    <div id="responseContainer" class="response-container"></div>
+    <script src="script.js"></script>
+</body>
+</html>
