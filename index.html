@@ -1,86 +1,59 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Your Attractive Black and White Website</title>
+    <title>Discord API Request</title>
     <style>
+        /* Add CSS styles here */
         body {
-            background: linear-gradient(to right, #000, #333); /* Gradient background */
-            color: #fff; /* White text */
-            font-family: Arial, sans-serif; /* Choose your preferred font */
-            margin: 0;
-            padding: 0;
+            background-image: url('background'); /* Set your background image URL */
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            font-family: Arial, sans-serif;
         }
 
         header {
-            background-color: #333; /* Darker header background */
-            color: #fff;
-            padding: 10px;
             text-align: center;
-        }
-
-        nav {
-            display: flex;
-            justify-content: space-around;
-            background-color: #444; /* Navigation bar background */
-            padding: 10px;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 8px 16px;
-            border-radius: 5px;
-            transition: background-color 0.3s;
-        }
-
-        nav a:hover {
-            background-color: #555; /* Darker color on hover */
-        }
-
-        section {
             padding: 20px;
         }
 
-        footer {
-            background-color: #333; /* Darker footer background */
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-            position: fixed;
-            bottom: 0;
-            width: 100%;
+        img {
+            max-width: 100%;
         }
+        
+        .success {
+         color: green;
+         font-weight: bold;
+        }
+
+        .failure {
+        color: red;
+        font-weight: bold;
+        }
+
+        /* Add more CSS styles for other elements as needed */
     </style>
 </head>
 <body>
-
     <header>
-        <h1>Your Website Title</h1>
+        <img src="background.jpg" width="45" alt="Website Header">
+        <h1>Welcome to the Discord API Request Tool</h1>
     </header>
-
-    <nav>
-        <a href="#home">Home</a>
-        <a href="#about">About</a>
-        <a href="#services">Services</a>
-        <a href="#portfolio">Portfolio</a>
-        <a href="#blog">Blog</a>
-        <a href="#contact">Contact</a>
-        <a href="#page7">Page 7</a>
-        <a href="#page8">Page 8</a>
-    </nav>
-
-    <section id="home">
-        <h2>Welcome to your black and white website. This is the home section.</h2>
-        <!-- Add more content as needed -->
-    </section>
-
-    <!-- Repeat the section structure for other pages -->
-
-    <footer>
-        &copy; 2023 Your Website Name
-    </footer>
-
+    <form id="requestForm">
+        <div class="form-container">
+            <label for="urlInput">Enter Discord API URL:</label>
+            <input type="text" id="urlInput" placeholder="Enter Discord API URL">
+            <br>
+            <br>
+            <label for="tokenInput">Enter Discord tokens (one per line):</label>
+            <br>
+            <textarea id="tokenInput" rows="23" cols="77" placeholder="Enter Discord tokens, one per line"></textarea>
+            <br>
+            <br>
+            <button type="submit">Make Discord API Requests</button>
+        </div>
+    </form>
+    <div id="responseContainer" class="response-container"></div>
+    <script src="script.js"></script>
 </body>
 </html>
